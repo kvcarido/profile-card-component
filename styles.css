@@ -27,10 +27,14 @@ html {
   background-color: var(--clr-accent-400);
   font-family: var(--ff-base);
   color: var(--clr-neutral-500);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -31.25rem left, bottom -31.25rem right -6.25rem;
 }
 
 body {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
