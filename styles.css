@@ -5,6 +5,8 @@
   --clr-neutral: 0, 0%, 59%;
   /* needed to change opacity */
   --clr-neutral-500: hsl(227, 10%, 46%);
+  --clr-shadow: 227, 10%, 46%;
+  /* box shadow */
   --clr-neutral-700: hsl(229, 23%, 23%);
 
   --clr-accent-400: hsl(185, 75%, 39%);
@@ -21,10 +23,18 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   background-color: var(--clr-accent-400);
   font-family: var(--ff-base);
   color: var(--clr-neutral-500);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1,
@@ -34,14 +44,18 @@ span {
   margin: 0;
 }
 
-.card {
+.container {
   width: 90%;
   max-width: 21.875rem;
-  margin: 10.625rem auto;
+}
+
+.card {
   background: var(--clr-white);
   border-radius: 1rem;
+  box-shadow: -10px 10px 20px 5px hsl(var(--clr-shadow), 0.5);
   overflow: hidden;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .card__img {
@@ -57,8 +71,8 @@ span {
 .profile-picture img {
   border: 5px solid var(--clr-white);
   border-radius: 50%;
-  position: relative;
-  top: -3rem;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
 }
 
 .card__info {
@@ -122,21 +136,4 @@ a:hover,
 a:focus {
   cursor: pointer;
   opacity: 0.7;
-}
-
-.bg {
-  z-index: -1;
-  opacity: 0.75;
-  position: absolute;
-  height: 100vh;
-}
-
-.bg-top {
-  top: -50%;
-  right: 50%;
-}
-
-.bg-bottom {
-  bottom: -50%;
-  left: 50%;
 }
