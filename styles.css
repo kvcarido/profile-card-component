@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-neutral-400: hsl(0, 0%, 59%);
+  --clr-neutral: 0, 0%, 59%;
+  /* needed to change opacity */
+  --clr-neutral-500: hsl(227, 10%, 46%);
+  --clr-neutral-700: hsl(229, 23%, 23%);
+
+  --clr-accent-400: hsl(185, 75%, 39%);
+  --clr-white: #fff;
+
+  --ff-base: "Kumbh Sans", sans-serif;
+  --fs-base: 1.125rem;
+  /* 18px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-accent-400);
+  font-family: var(--ff-base);
+  color: var(--clr-neutral-500);
+}
+
+h1,
+h2,
+p,
+span {
+  margin: 0;
+}
+
+.card {
+  width: 90%;
+  max-width: 21.875rem;
+  margin: 10.625rem auto;
+  background: var(--clr-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card__img {
+  background-image: url("images/bg-pattern-card.svg");
+  background-position: cover;
+  padding: 4.375rem;
+}
+
+.profile-picture {
+  display: inline-block;
+}
+
+.profile-picture img {
+  border: 5px solid var(--clr-white);
+  border-radius: 50%;
+  position: relative;
+  top: -3rem;
+}
+
+.card__info {
+  margin-bottom: 2rem;
+}
+
+.card__info .profile-name {
+  display: inline-block;
+  font-size: var(--fs-base);
+  color: var(--clr-neutral-700);
+  line-height: 1;
+  letter-spacing: 0.25px;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__info .location {
+  margin-bottom: 1rem;
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid hsl(var(--clr-neutral), 0.3);
+  padding: 1rem;
+}
+
+.card__stat {
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.card__stat .stats {
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-base);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card__stat .subtext {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.attribution {
+  color: var(--clr-white);
+  line-height: 1.5;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--clr-white);
+  letter-spacing: 0.5px;
+}
+
+a:hover,
+a:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.bg {
+  z-index: -1;
+  opacity: 0.75;
+  position: absolute;
+  height: 100vh;
+}
+
+.bg-top {
+  top: -50%;
+  right: 50%;
+}
+
+.bg-bottom {
+  bottom: -50%;
+  left: 50%;
+}
